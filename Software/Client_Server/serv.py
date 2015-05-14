@@ -13,9 +13,12 @@
 
 import socket
 import gopigo
+import sys
+import time
 
 # Listen on localhost at port 5005
-TCP_IP = '127.0.0.1' 
+#TCP_IP = '127.0.0.1' 
+TCP_IP = '172.20.10.6'
 TCP_PORT = 5005
 BUFFER_SIZE = 20
 
@@ -40,21 +43,37 @@ while True:
 		if len(data) <> 1:
 			print ("Invalid command")
 			conn.send("Invalid command")
-		elif data=='f':
+		elif data=='w':
 			gopigo.fwd()
 			conn.send("Moving forward")
-		elif data=='s':
+		elif data=='x':
 			gopigo.stop()
 			conn.send("Stopping")
-		elif data=='b':
+		elif data=='s':
 			gopigo.bwd()
 			conn.send("Moving back")
-		elif data=='l':
+		elif data=='a':
 			gopigo.left()
 			conn.send("Turning left")
-		elif data=='r':
+		elif data=='d':
 			gopigo.right()
 			conn.send("Turning right")
+		elif data=='t':
+                        gopigo.increase_speed()
+                        conn.send("Increase speed")
+                elif data=='g':
+                        gopigo.decrease_speed()
+                        conn.send("Decrease speed")
+                elif data=='v':
+                        # print gopigo.volt(), 'V'
+                        conn.send(str(gopigo.volt()))
+                elif data=='l':
+                        gopigo.led_on(0)
+			gopigo.led_on(1)
+			time.sleep(1)
+			gopigo.led_off(0)
+			gopigo.led_off(1)
+                        conn.send("Flash LED")		
 		else:
 			print ("Invalid command")
 			conn.send("Invalid command")
