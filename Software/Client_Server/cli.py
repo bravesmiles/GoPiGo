@@ -14,7 +14,8 @@
 import socket
 import time
 def send(msg):
-	TCP_IP = '127.0.0.1'
+	#TCP_IP = '127.0.0.1'
+	TCP_IP = '172.20.10.6'
 	TCP_PORT = 5005
 	BUFFER_SIZE = 1024
 	MESSAGE = msg
