@@ -22,7 +22,7 @@ tasks = [
 def get_tasks():
     return jsonify({'tasks': tasks})
 
-@app.route('car/api/v1.0/task', methods=['POST'])
+@app.route('/car/api/v1.0/task', methods=['POST'])
 def create_task():
     if not request.json or not 'title' in request.json:
         abort(400)
