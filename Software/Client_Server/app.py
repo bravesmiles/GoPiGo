@@ -30,4 +30,4 @@ def get_task(task_id):
 
 # run as a app
 if __name__ == '__main__':
-    app.run(host='10.154.144.31', debug=True)
+    app.run(host='10.154.176.25', debug=True)
