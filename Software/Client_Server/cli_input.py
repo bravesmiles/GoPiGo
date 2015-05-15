@@ -7,7 +7,8 @@
 # Send a single byte command to the server:
 # s 	- stop
 #	f 	- move forward
-#	b 	- move back
+#	b 	- move backw
+
 #	l	- turn left
 #	r	- turn right
 
