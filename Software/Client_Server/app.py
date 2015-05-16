@@ -57,25 +57,25 @@ def process_command(_command, _time):
         return "Invalid command"
     elif data == 'w':
         gopigo.fwd()
-        return "Moving forward"
+        # return "Moving forward"
     elif data == 'x':
         gopigo.stop()
-        return "Stopping"
+        # return "Stopping"
     elif data == 's':
         gopigo.bwd()
-        return "Moving back"
+        # return "Moving back"
     elif data == 'a':
         gopigo.left()
-        return "Turning left"
+        # return "Turning left"
     elif data == 'd':
         gopigo.right()
-        return "Turning right"
+        # return "Turning right"
     elif data == 't':
         gopigo.increase_speed()
-        return "Increase speed"
+        # return "Increase speed"
     elif data == 'g':
         gopigo.decrease_speed()
-        return "Decrease speed"
+        # return "Decrease speed"
     elif data == 'v':
         # print gopigo.volt(), 'V'
         return str(gopigo.volt())
