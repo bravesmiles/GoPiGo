@@ -28,6 +28,8 @@ def add_tasks():
     command = json['command']
     period = int(json['time'])
 
+    print description, command, period
+
     process_command(command, period)
     return jsonify(json)
 
