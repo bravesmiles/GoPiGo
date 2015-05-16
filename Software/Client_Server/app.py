@@ -93,6 +93,7 @@ def process_command(_command, _time):
     if _time:
         time.sleep(_time)
     gopigo.stop()
+    print "Stopping!"
 
 
 if __name__ == '__main__':
