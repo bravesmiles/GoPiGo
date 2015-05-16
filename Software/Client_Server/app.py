@@ -26,8 +26,9 @@ def add_tasks():
     json = request.json
     description = json['description']
     command = json['command']
-    time = int(json['time'])
+    period = int(json['time'])
 
+    process_command(command, period)
     return jsonify(json)
 
 
