@@ -94,4 +94,4 @@ def process_command(_command, _time):
 
 
 if __name__ == '__main__':
-    app.run(host='10.154.176.25', debug=True)
+    app.run(host='172.20.10.6', debug=True)
