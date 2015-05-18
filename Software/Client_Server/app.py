@@ -26,7 +26,7 @@ def add_tasks():
     json = request.json
     description = json['description']
     command = json['command']
-    period = int(json['time'])
+    period = float(json['time'])
 
     print description, command, period
 
