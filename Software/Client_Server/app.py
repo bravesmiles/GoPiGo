@@ -92,7 +92,7 @@ def process_command(_command, _time):
 
     if _time:
         time.sleep(_time)
-    gopigo.stop()
+        gopigo.stop()
 
 
 if __name__ == '__main__':
