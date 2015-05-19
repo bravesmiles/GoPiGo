@@ -1,3 +1,5 @@
+__author__ = "Yaojing Liu"
+
 #!/usr/bin/env python
 
 # This is a basic example for a socket client for the GoPiGo.
