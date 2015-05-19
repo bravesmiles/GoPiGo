@@ -26,15 +26,19 @@ def test():
 @crossdomain(origin='*')
 def add_tasks():
     json = request.json
+    command = json['command']
+    print command
+
     if 'description' in json:
         description = json['description']
+        print description
     if 'time' in json:
         period = float(json['time'])
+        print period
+        process_command(command, period)
 
-    command = json['command']
-    print description, command, period
-
-    process_command(command, period)
+    else:
+        process_command(command, False)
     return jsonify(json)
 
 
