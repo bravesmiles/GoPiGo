@@ -27,14 +27,14 @@ def test():
 def add_tasks():
     json = request.json
     command = json['command']
-    print command
+    print 'command:', command
 
     if 'description' in json:
         description = json['description']
-        print description
+        print 'description:', description
     if 'time' in json:
         period = float(json['time'])
-        print period
+        print 'period:', period
         process_command(command, period)
 
     else:
