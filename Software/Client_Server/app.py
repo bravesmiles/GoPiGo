@@ -26,9 +26,9 @@ def test():
 @crossdomain(origin='*')
 def add_tasks():
     json = request.json
-    if json['description']:
+    if 'description' in json:
         description = json['description']
-    if json['time']:
+    if 'time' in json:
         period = float(json['time'])
 
     command = json['command']
