@@ -24,10 +24,12 @@ def test():
 @crossdomain(origin='*')
 def add_tasks():
     json = request.json
-    description = json['description']
-    command = json['command']
-    period = float(json['time'])
+    if json['description']:
+        description = json['description']
+    if json['time']:
+        period = float(json['time'])
 
+    command = json['command']
     print description, command, period
 
     process_command(command, period)
